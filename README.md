@@ -17,7 +17,8 @@ De acordo com os requisitos da aplicação, foram utilizadas as seguintes tecnol
 ![Tecnologias](https://skillicons.dev/icons?i=html,css,react,vite,styledcomponents,ts)
 
 - HTML & CSS
-- Reactjs 
+- Reactjs
+- Vite
 - Styled-Components
 - Typescript
 
