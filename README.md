@@ -1,27 +1,71 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎶 My Music List
 
-Currently, two official plugins are available:
+Projeto voltado para o mundo musical.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto consiste em uma lista musical personalizada do usuário, podendo este adicionar músicas, artistas ou albuns para ouvir mais tarde e remover conforme os escuta.
 
-## Expanding the ESLint configuration
+- Design da interface: https://www.figma.com/proto/zU7B3MrtWjj9gtYYE0HSNb/mml---Aprimorado?page-id=0%3A1&type=design&node-id=1349-3678&viewport=-5595%2C-1493%2C0.43&t=P0EYASk3GfsHWX39-1&scaling=min-zoom&starting-point-node-id=1349%3A3678&show-proto-sidebar=1&mode=design
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Repositório do Back-End: https://github.com/Spasiic/Back-End
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## 🦆 Tecnologias
+
+De acordo com os requisitos do teste, foram utilizadas as seguintes tecnologias:
+
+![Tecnologias](https://skillicons.dev/icons?i=html,css,react,vite,styledcomponents,ts)
+
+- HTML & CSS
+- Reactjs 
+- Styled-Components
+- Typescript
+
+
+## 🏃Instalação e Execução
+Abaixo estão instruções de como rodar o projeto localmente.
+
+1. Clone esse repositório
+
+```bash
+  git clone https://github.com/annaluizando/ensinio-front.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Entre na pasta do projeto
+
+```bash
+  cd ensinio-front
+```
+
+3. Instale os packages necessários
+
+```bash
+  npm install
+```
+
+4. Inicialize o servidor numa porta local
+
+```bash
+   npm run dev
+```
+## 💻 Deploy
+Por enquanto o deploy do frontend não foi realizado, quando for será na plataforma Vercel.
+
+
+## 🚀 Roadmap / Jornada
+
+- Desenvolvimento dos componentes
+- Desenvolvimento da landing page
+- Desenvolvimento da tela de login
+- Desenvolvimento da tela de registro
+- Desenvolvimento da tela home
+- Ajustes da responsividade
+- Adição da API e integrações com backend
+- Melhorias e limpezas no código
+- Revisão Final
+
+
+## 🗂️ Autores
+- [@annaluizando](https://github.com/annaluizando)
+
+- [@annyxvs](https://github.com/annyxvs)
