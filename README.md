@@ -17,7 +17,8 @@ De acordo com os requisitos do teste, foram utilizadas as seguintes tecnologias:
 ![Tecnologias](https://skillicons.dev/icons?i=html,css,react,vite,styledcomponents,ts)
 
 - HTML & CSS
-- Reactjs 
+- Reactjs
+- Vite
 - Styled-Components
 - Typescript
 
