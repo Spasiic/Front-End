@@ -16,8 +16,4 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
     }
-
-    .rotate{
-        transform:scaleY(-1) ;
-    }
 `

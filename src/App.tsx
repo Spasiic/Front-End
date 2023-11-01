@@ -1,15 +1,21 @@
-import { useContext } from "react"
-import {UserContext} from './contexts/UserContext'
-import { PublicRoutes } from "./routes/PublicRoutes"
-import MainPage from "./pages/MainPage"
+import { useContext } from "react";
+import { UserContext } from './contexts/UserContext';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme';
+import { PublicRoutes } from "./routes/PublicRoutes";
+import MainPage from "./pages/MainPage";
 
 function App() {
+  const userContext = useContext(UserContext);
 
-  const {auth} = useContext(UserContext)
+  const auth: boolean = userContext?.auth || false;
 
   return (
-    auth ? <MainPage/> : <PublicRoutes/>
-  )
+    <ThemeProvider theme={theme}>
+      {auth ? <MainPage /> : <PublicRoutes />}
+    </ThemeProvider>
+  );
 }
 
-export default App
+
+export default App;

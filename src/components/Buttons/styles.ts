@@ -5,11 +5,12 @@ import styled from 'styled-components';
 export const CustomButtonFilter = styled.button`
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 0.3rem;
   text-align: center;
   padding: 0.25rem;
-  background-color: gray;
+  background-color: ${(props) => props.theme.colors.gray}; 
   border-radius: 9999px;
+  cursor: pointer;
 `;
 
 export const Icon = styled.img`
@@ -19,9 +20,9 @@ export const Icon = styled.img`
 `;
 
 export const Text = styled.p`
-  color: white;
-  font-weight: 500;
-  font-size: 16px;
+  color: ${(props) => props.theme.colors.white}; 
+  font-weight: ${(props) => props.theme.weights.semibold};
+  font-size: ${(props) => props.theme.sizes.medium};
   margin-right: 0.5rem;
 `;
 
@@ -37,19 +38,20 @@ export const CustomButtonFocus = styled.button`
   border-radius: 0.25rem;
   transition: background-color 0.3s;
   font-size: 0.75rem;
-  
+  cursor: pointer;
+
   @media (min-width: 768px) {
     font-size: 100%;
   }
 
-  .purple{
-    background-color: red;
+  &.purple {
+    background-color: ${(props) => props.theme.colors.purple}; 
   }
 
-  .black{
-    background-color: blue;
-  }
-`;
+  &.black {
+    background-color: ${(props) => props.theme.colors.black}; 
+  };
+`
 
 export const IconFC = styled.img`
   width: 32px;
@@ -62,7 +64,7 @@ export const TextFC = styled.p`
   background-color: transparent;
 `;
 
-// Landing Button 
+// Landing Button
 
 export const CustomButtonLanding = styled.button`
   background-color: #515151;
@@ -74,15 +76,16 @@ export const CustomButtonLanding = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   transition: background-color 0.3s;
+  cursor: pointer;
 
   &:hover {
-    background-color: gray;
+    background-color: ${(props) => props.theme.colors.gray}; 
   }
 
-  a{
+  a {
     text-decoration: none;
-  }
-`;
+  };
+`
 
 // Selected Buttom
 
@@ -94,10 +97,10 @@ export const CustomButtonSelected = styled.button`
   align-items: center;
   padding: 1rem;
   border-radius: 0.25rem;
-  background-color: purple;
+  background-color: ${(props) => props.theme.colors.purple};
   font-size: 0.75rem;
   cursor: pointer;
-  
+
   @media (min-width: 768px) {
     font-size: 100%;
   }

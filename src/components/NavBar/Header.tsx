@@ -23,7 +23,7 @@ export function Header() {
 
     return (
         <S.HeaderContainer className="m-4 flex flex-col md:flex-row justify-between items-center overflow-y-hidden">
-            <S.LogoImage src={Logo} height={89} width={127} alt="Logo MyMusicList" className="mb-2 hidden lg:block" />
+            <S.LogoImage draggable="false" src={Logo} height={89} width={127} alt="Logo MyMusicList" className="mb-2 hidden lg:block" />
 
             <S.Navigation className="flex flex-col-reverse md:flex-row gap-4">
                 <S.ButtonsContainer className="flex gap-2">
