@@ -2,7 +2,10 @@
 import { createContext, useState, ReactNode } from "react";
 import { UserContextType } from "../types/UserContextType";
 
-export const UserContext = createContext<UserContextType | undefined>(undefined);
+export const UserContext = createContext<UserContextType>({
+    setAuth: () => { },
+    auth: false,
+});
 
 export function UserProvider({ children }: { children: ReactNode }) {
     const [auth, setAuth] = useState(false);
