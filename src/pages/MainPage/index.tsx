@@ -4,23 +4,17 @@ import MyList from "../../components/MyList";
 import SearchMusic from "../../components/SearchMusic";
 import { MainContainer } from "./style";
 
-
 export default function MainPage() {
-    const [list, setList] = useState(true);
+  const [list, setList] = useState(true);
 
-    useEffect(() => {
-        console.log(setList)
-    }, [])
+  useEffect(() => {
+    console.log(setList);
+  }, []);
 
-
-    return (
-        <MainContainer>
-            <Header></Header>
-            {list ? (
-                <MyList />
-            ) : (
-                <SearchMusic />
-            )}
-        </MainContainer>
-    );
+  return (
+    <MainContainer>
+      <Header></Header>
+      {list ? <MyList /> : <SearchMusic />}
+    </MainContainer>
+  );
 }

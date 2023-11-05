@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { UserContext } from './contexts/UserContext';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './theme';
+import { UserContext } from "./contexts/UserContext";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 import { PublicRoutes } from "./routes/PublicRoutes";
 import MainPage from "./pages/MainPage";
 
@@ -16,6 +16,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
 
 export default App;

@@ -1,4 +1,4 @@
 export type UserContextType = {
-    setAuth: (value: boolean) => void;
-    auth: boolean;
+  setAuth: (value: boolean) => void;
+  auth: boolean;
 };

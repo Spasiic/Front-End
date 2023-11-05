@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import background from '../../../public/assets/background-w-texture.svg'
+import background from "../../../public/assets/background-w-texture.svg";
 
 export const Landin = styled.nav`
   box-sizing: border-box;
@@ -21,28 +21,28 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  gap: .3rem;
+  gap: 0.3rem;
 
-  img{
+  img {
     min-height: 12.8rem;
   }
 
-  h2{
+  h2 {
     font-size: 1rem;
   }
 
-  h3{
-    font-size: .65rem;
+  h3 {
+    font-size: 0.65rem;
   }
 `;
 
 export const Nav = styled.nav`
   text-transform: uppercase;
-  margin: .3rem;
+  margin: 0.3rem;
   width: 84px;
 
-  a{
-    font-size: .85rem;
+  a {
+    font-size: 0.85rem;
     text-decoration: none;
   }
 
@@ -51,19 +51,19 @@ export const Nav = styled.nav`
   transition: border-bottom 0.3s ease-in-out;
 
   &:before {
-    content: ' ';
+    content: " ";
     position: absolute;
     width: 0%;
-    height: 1px; 
+    height: 1px;
     bottom: 0;
     left: 0;
-    background: white; 
+    background: white;
     transition: width 0.5s ease-in-out;
   }
 
   &:hover {
     &:before {
-      width: 100%; 
+      width: 100%;
     }
   }
 `;
@@ -72,18 +72,18 @@ export const Paragraph = styled.p`
   margin: 1rem;
 
   font-size: 1rem;
-  max-width: 41rem; 
-  height: 91px; 
+  max-width: 41rem;
+  height: 91px;
   text-align: justify;
 
-  @media  (max-width: 798px){
+  @media (max-width: 798px) {
     width: 80vw;
     height: auto;
 
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
-  @media  (min-width: 1024px){
+  @media (min-width: 1024px) {
     font-size: 1.2rem;
   }
 `;
@@ -93,5 +93,5 @@ export const SectionButtons = styled.section`
   flex-direction: column;
   align-items: center;
 
-  gap: .3rem;
-`
+  gap: 0.3rem;
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import close from "../../../public/assets/close.svg";
 
 // Search
@@ -16,26 +16,26 @@ export const SearchInput = styled.input`
   height: 2.5rem;
   padding-left: 0.5rem;
   background: transparent;
-  color: ${(props) => props.theme.colors.lightGray}; 
+  color: ${(props) => props.theme.colors.lightGray};
   border: none;
   border-radius: 1.25rem;
   font-size: ${(props) => props.theme.font.sizes.xxSmall};
   outline: none;
 
   &::placeholder {
-    font-size: ${(props) => props.theme.font.sizes.xxSmall}; 
+    font-size: ${(props) => props.theme.font.sizes.xxSmall};
     @media (min-width: 768px) {
       font-size: 100%;
     }
   }
-  
+
   &:not(:placeholder-shown),
   &:focus {
     background: transparent;
     color: ${(props) => props.theme.colors.white};
   }
 
-   &::-webkit-search-cancel-button {
+  &::-webkit-search-cancel-button {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -69,8 +69,6 @@ export const HeaderContainer = styled.header`
   @media (min-width: 1165px) {
     flex-direction: row;
   }
-
-
 `;
 
 export const LogoImage = styled.img`

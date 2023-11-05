@@ -1,4 +1,4 @@
-import  backgroundImg  from '../../../public/assets/background-w-texture.svg';
+import backgroundImg from "../../../public/assets/background-w-texture.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -21,8 +21,8 @@ export const LogoImage = styled.img`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%; 
-  height: 75%; 
+  width: 50%;
+  height: 75%;
   text-align: center;
   align-items: center;
   justify-content: space-around;
@@ -71,15 +71,15 @@ export const Input = styled.input`
 `;
 
 export const InputLabel = styled.label`
-  font-size: .8rem;
+  font-size: 0.8rem;
   position: absolute;
   left: 0;
 `;
 
 export const Description = styled.h3`
-  font-size: .6rem; 
+  font-size: 0.6rem;
   text-align: end;
-  color:red;
+  color: red;
 `;
 
 export const but = styled.button`
@@ -87,4 +87,3 @@ export const but = styled.button`
   background-color: red;
   z-index: 9;
 `;
-

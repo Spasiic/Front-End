@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Clock from "../../../public/assets/clock.svg"
-import Seta from "../../../public/assets/seta.svg"
-import Close from "../../../public/assets/close.svg"
-import Calendar from "../../../public/assets/calendar.svg"
+import styled from "styled-components";
+import Clock from "../../../public/assets/clock.svg";
+import Seta from "../../../public/assets/seta.svg";
+import Close from "../../../public/assets/close.svg";
+import Calendar from "../../../public/assets/calendar.svg";
 
 export const Blur = styled.div`
   width: 100vw;
@@ -12,7 +12,7 @@ export const Blur = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.blur};
-  `;
+`;
 
 export const AlarmContainer = styled.div`
   background-color: #333;
@@ -22,7 +22,7 @@ export const AlarmContainer = styled.div`
   display: grid;
   justify-items: center;
   position: relative;
-  `;
+`;
 
 export const TopDiv = styled.div`
   display: flex;
@@ -30,13 +30,13 @@ export const TopDiv = styled.div`
   justify-content: space-between;
   width: 550px;
   padding: 0 1rem;
-  
-  div{
+
+  div {
     display: flex;
     justify-content: space-between;
     width: 245px;
   }
-  `;
+`;
 
 export const Title = styled.h2`
   font-size: 20px;
@@ -63,7 +63,7 @@ export const InfoGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2px;
-  `;
+`;
 
 export const MusicTitle = styled.h4`
   font-size: ${(props) => props.theme.font.sizes.small};
@@ -80,20 +80,20 @@ export const ContainerHour = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 300px;
-  `;
+`;
 
 export const Heading = styled.h3`
   font-size: 20px;
   font-weight: medium;
   text-transform: uppercase;
-  `;
+`;
 
 export const SubContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 140px;
-  `;
+`;
 
 export const NumberContainer = styled.div`
   display: grid;
@@ -104,7 +104,6 @@ export const NumberButton = styled.button`
   width: auto;
   height: auto;
   cursor: pointer;
-
 `;
 
 export const NumberText = styled.h2`
@@ -117,14 +116,14 @@ export const NumberText = styled.h2`
 
 export const Colon = styled.h2`
   font-size: 44px;
-  `;
+`;
 
 export const DateDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 300px;
-  `;
+`;
 
 export const TitleDate = styled.h3`
   font-size: 20px;
@@ -144,13 +143,12 @@ export const DateInput = styled.input`
   outline: none;
   border: none;
   background-color: transparent;
-  
+
   &::-webkit-calendar-picker-indicator {
     filter: invert(100%);
     cursor: pointer;
   }
-  `;
-
+`;
 
 export const ContainerButton = styled.div`
   display: flex;
@@ -158,7 +156,7 @@ export const ContainerButton = styled.div`
   justify-content: flex-end;
   padding-right: 5px;
   width: 557px;
-  `;
+`;
 
 export const ConfirmButton = styled.button`
   background-color: white;
@@ -168,8 +166,8 @@ export const ConfirmButton = styled.button`
   width: 159px;
   height: 46px;
   text-transform: uppercase;
-  margin: .4rem .8rem;
-  `;
+  margin: 0.4rem 0.8rem;
+`;
 
 export const ErrorMessage = styled.p`
   position: absolute;
@@ -178,7 +176,7 @@ export const ErrorMessage = styled.p`
   font-size: 0.8rem;
   font-weight: bold;
   color: purple;
-  `;
+`;
 
 export const CalendarIcon = styled.button`
   position: absolute;
