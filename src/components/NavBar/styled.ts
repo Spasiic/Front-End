@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import close from "../../../public/assets/close.svg";
+
 // Search
 
 export const SearchContainer = styled.div`
@@ -65,23 +66,30 @@ export const HeaderContainer = styled.header`
   align-items: center;
   overflow-y: hidden;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1165px) {
     flex-direction: row;
   }
+
+
 `;
 
 export const LogoImage = styled.img`
   height: 89px;
   width: 127px;
   margin-bottom: 2px;
+  @media (max-width: 1165px) {
+    display: none;
+  }
 `;
 
 export const Navigation = styled.nav`
   display: flex;
   flex-direction: column-reverse;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1165px) {
     flex-direction: row;
+    align-items: center;
+    align-content: center;
   }
 
   gap: 1rem;
@@ -90,6 +98,8 @@ export const Navigation = styled.nav`
 export const ButtonsContainer = styled.div`
   display: flex;
   gap: 0.5rem;
+  @media (min-width: 1165px) {
+  }
 `;
 
 export const SearchSection = styled.section`

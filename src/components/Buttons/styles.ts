@@ -51,6 +51,10 @@ export const CustomButtonFocus = styled.button`
   &.black {
     background-color: ${(props) => props.theme.colors.black}; 
   };
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.purple}; 
+  }
 `
 
 export const IconFC = styled.img`
