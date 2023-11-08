@@ -1,4 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import Clock from "../../../public/assets/clock.svg";
+import Seta from "../../../public/assets/seta.svg";
+import Close from "../../../public/assets/close.svg";
+import Calendar from "../../../public/assets/calendar.svg";
+
+export const Blur = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.colors.blur};
+`;
 
 export const AlarmContainer = styled.div`
   background-color: #333;
@@ -17,16 +31,11 @@ export const TopDiv = styled.div`
   width: 550px;
   padding: 0 1rem;
 
-  div{
+  div {
     display: flex;
     justify-content: space-between;
     width: 245px;
   }
-`;
-
-export const ClockIcon = styled.img`
-  width: 24px;
-  height: 24px;
 `;
 
 export const Title = styled.h2`
@@ -36,21 +45,17 @@ export const Title = styled.h2`
   color: white;
 `;
 
-export const CloseIcon = styled.img`
-  width: 26px;
-  height: 26px;
-`;
-
 export const MusicInfo = styled.div`
   display: flex;
   height: 85px;
-  width: 190px;
-  justify-content: space-between;
+  width: 244px;
+  justify-content: space-around;
 `;
 
 export const AlbumPhoto = styled.img`
   width: 85px;
   height: 85px;
+  border-radius: 4px;
 `;
 
 export const InfoGrid = styled.div`
@@ -61,12 +66,12 @@ export const InfoGrid = styled.div`
 `;
 
 export const MusicTitle = styled.h4`
-  font-size: 14px;
-  font-weight: normal;
+  font-size: ${(props) => props.theme.font.sizes.small};
+  font-weight: ${(props) => props.theme.font.weights.medium};
 `;
 
 export const ArtistName = styled.h4`
-  font-size: 14px;
+  font-size: ${(props) => props.theme.font.sizes.xxSmall};
   font-weight: normal;
 `;
 
@@ -92,24 +97,21 @@ export const SubContainer = styled.div`
 
 export const NumberContainer = styled.div`
   display: grid;
-  place-content: center;
+  justify-items: center;
 `;
 
 export const NumberButton = styled.button`
+  width: auto;
+  height: auto;
   cursor: pointer;
-
-  img {
-    width: 26px;
-    height: 26px;
-  }
 `;
 
 export const NumberText = styled.h2`
-  font-size: 44px;
+  font-size: ${(props) => props.theme.font.sizes.xLarge};
   width: 60px;
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: ${(props) => props.theme.font.weights.semibold};
 `;
 
 export const Colon = styled.h2`
@@ -141,13 +143,11 @@ export const DateInput = styled.input`
   outline: none;
   border: none;
   background-color: transparent;
-`;
 
-export const CalendarIcon = styled.img`
-  position: absolute;
-  right: 7px;
-  width: 16px;
-  height: 16px;
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+    cursor: pointer;
+  }
 `;
 
 export const ContainerButton = styled.div`
@@ -166,7 +166,7 @@ export const ConfirmButton = styled.button`
   width: 159px;
   height: 46px;
   text-transform: uppercase;
-  margin: .4rem .8rem;
+  margin: 0.4rem 0.8rem;
 `;
 
 export const ErrorMessage = styled.p`
@@ -176,4 +176,52 @@ export const ErrorMessage = styled.p`
   font-size: 0.8rem;
   font-weight: bold;
   color: purple;
+`;
+
+export const CalendarIcon = styled.button`
+  position: absolute;
+  right: 7px;
+  width: 23px;
+  height: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${Calendar}) no-repeat center center;
+`;
+
+export const ClockIcon = styled.img`
+  width: 28px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background: url(${Clock}) no-repeat center center;
+`;
+
+export const CloseButton = styled.button`
+  width: 11px;
+  height: 13px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${Close}) no-repeat center center;
+`;
+
+export const IncreaseArrow = styled.button`
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(${Seta});
+  background-repeat: no-repeat;
+  background-position: center center;
+`;
+
+export const DecreaseArrow = styled.button`
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(${Seta});
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(180deg);
 `;

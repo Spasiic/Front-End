@@ -1,4 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import AddAlarm from "../../../public/assets/alarme(1).svg";
+import AlarmAdded from "../../../public/assets/alarme.svg";
+import Add from "../../../public/assets/plus.svg";
 
 export const AlbumCard = styled.div`
   width: 31.188rem;
@@ -8,14 +11,14 @@ export const AlbumCard = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 .2rem;
+  padding: 0 0.2rem;
 `;
 
 export const AlbumImage = styled.img`
   height: 121px;
   width: 121px;
   border-radius: 4px;
-  margin: 0 .5rem; 
+  margin: 0 0.5rem;
 `;
 
 export const AlbumInfo = styled.div`
@@ -45,15 +48,14 @@ export const ActionItemContainer = styled.div`
   width: 7px;
 `;
 
-
 export const Controls = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
   height: max-content;
-  margin-right: 1rem; 
+  margin-right: 1rem;
 
-  h3{
+  h3 {
     font-weight: 300;
   }
 `;
@@ -70,4 +72,28 @@ export const SocialLink = styled.a`
     height: 14px;
     width: 14px;
   }
+`;
+
+export const AddButton = styled.button`
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${Add}) no-repeat center center;
+`;
+
+export const AlarmAddButton = styled.button`
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${AddAlarm}) no-repeat center center;
+`;
+
+export const AlarmSetButton = styled.button`
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${AlarmAdded}) no-repeat center center;
 `;

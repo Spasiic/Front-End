@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ArtistInfoContainer = styled.div`
   display: flex;

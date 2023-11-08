@@ -1,4 +1,10 @@
-import { ColorTheme, FontFamily, FontSize, FontWeight, TextCase } from "../theme";
+import {
+  ColorTheme,
+  FontFamily,
+  FontSize,
+  FontWeight,
+  TextCase,
+} from "../theme";
 
 export interface TextProps {
   $size?: FontSize;

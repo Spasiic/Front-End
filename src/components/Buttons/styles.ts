@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // Filter Button
 
@@ -8,7 +8,7 @@ export const CustomButtonFilter = styled.button`
   gap: 0.3rem;
   text-align: center;
   padding: 0.25rem;
-  background-color: ${(props) => props.theme.colors.gray}; 
+  background-color: ${(props) => props.theme.colors.gray};
   border-radius: 9999px;
   cursor: pointer;
 `;
@@ -20,7 +20,7 @@ export const Icon = styled.img`
 `;
 
 export const Text = styled.p`
-  color: ${(props) => props.theme.colors.white}; 
+  color: ${(props) => props.theme.colors.white};
   font-weight: ${(props) => props.theme.weights.semibold};
   font-size: ${(props) => props.theme.sizes.medium};
   margin-right: 0.5rem;
@@ -45,13 +45,17 @@ export const CustomButtonFocus = styled.button`
   }
 
   &.purple {
-    background-color: ${(props) => props.theme.colors.purple}; 
+    background-color: ${(props) => props.theme.colors.purple};
   }
 
   &.black {
-    background-color: ${(props) => props.theme.colors.black}; 
-  };
-`
+    background-color: ${(props) => props.theme.colors.black};
+  }
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.purple};
+  }
+`;
 
 export const IconFC = styled.img`
   width: 32px;
@@ -79,13 +83,13 @@ export const CustomButtonLanding = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.gray}; 
+    background-color: ${(props) => props.theme.colors.gray};
   }
 
   a {
     text-decoration: none;
-  };
-`
+  }
+`;
 
 // Selected Buttom
 
