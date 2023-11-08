@@ -1,8 +1,8 @@
 import * as Yup from "yup";
 
 export const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Seu nome é obrigatório!"),
-  lastname: Yup.string().required("Seu sobrenome é obrigatório!"),
+  first_name: Yup.string().required("Seu nome é obrigatório!"),
+  last_name: Yup.string().required("Seu sobrenome é obrigatório!"),
   username: Yup.string()
     .min(2, "Nome de usuário de ter pelo menos 2 carcters")
     .required("Seu username é obrigatório!"),
