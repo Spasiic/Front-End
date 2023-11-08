@@ -12,7 +12,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {auth ? <MainPage/> : <PublicRoutes />}
+      {auth ? <MainPage /> : <PublicRoutes />}
     </ThemeProvider>
   );
 }

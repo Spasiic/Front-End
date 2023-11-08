@@ -1,11 +1,11 @@
- import { useState } from "react";
+/* import { LandingButton } from "../../components/Buttons/LadingButton";
+ */ import { useState } from "react";
 import Logo from "/assets/logo.svg";
 import * as S from "./style";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useFormik } from "formik";
 import { validationSchema } from "../../schemas/validationSchema";
-import { api } from "../../services/authAPI";
 
 export default function RegisterPage() {
   const [confirmSenha, setConfirmSenha] = useState<string | undefined>(
@@ -16,27 +16,18 @@ export default function RegisterPage() {
     setConfirmSenha(event.target.value);
   };
 
-  const navigate = useNavigate();
-
   const formik = useFormik({
     initialValues: {
-      first_name: "",
-      last_name: "",
+      name: "",
+      lastname: "",
       username: "",
       email: "",
       password: "",
     },
     validationSchema: validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: (values) => {
       if (values.password === confirmSenha) {
-        try {
-          const response = await api.registerUser(values);
-          if(response.status === 201) {
-            navigate('/login');
-          }
-        } catch (error) {
-          console.error("Erro ao registrar o usuário:", error);
-        }
+        console.log(values);
       }
     },
   });
@@ -61,16 +52,16 @@ export default function RegisterPage() {
             <S.InputWrapper>
               <S.Input
                 placeholder=" "
-                name="first_name"
+                name="name"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.first_name}
+                value={formik.values.name}
               />
               <S.InputLabel>Nome</S.InputLabel>
               <S.Description>
                 {" "}
-                {formik.touched.first_name && formik.errors.first_name && (
-                  <S.Description>{formik.errors.first_name}</S.Description>
+                {formik.touched.name && formik.errors.name && (
+                  <S.Description>{formik.errors.name}</S.Description>
                 )}
               </S.Description>
             </S.InputWrapper>
@@ -78,15 +69,16 @@ export default function RegisterPage() {
             <S.InputWrapper>
               <S.Input
                 placeholder=" "
-                name="last_name"
+                name="lastname"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.last_name}
+                value={formik.values.lastname}
               />
               <S.InputLabel>Sobrenome</S.InputLabel>
               <S.Description>
-                {formik.touched.last_name && formik.errors.last_name && (
-                  <S.Description>{formik.errors.last_name}</S.Description>
+                {" "}
+                {formik.touched.lastname && formik.errors.lastname && (
+                  <S.Description>{formik.errors.lastname}</S.Description>
                 )}
               </S.Description>
             </S.InputWrapper>

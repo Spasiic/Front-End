@@ -38,7 +38,7 @@ export const Subtitle = styled.h1`
   font-size: 1rem;
 `;
 
-export const RegistrationLink = styled.p`
+export const RegistrationLink = styled.a`
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: underline;

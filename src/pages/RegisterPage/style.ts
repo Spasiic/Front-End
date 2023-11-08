@@ -38,7 +38,7 @@ export const Subtitle = styled.h1`
   font-size: 1rem;
 `;
 
-export const RegistrationLink = styled.p`
+export const RegistrationLink = styled.a`
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: underline;
@@ -84,7 +84,7 @@ export const InputLabel = styled.label`
   left: 0;
 `;
 
-export const Description = styled.span`
+export const Description = styled.h3`
   font-size: 0.6rem;
   text-align: end;
   color: red;

@@ -1,37 +1,13 @@
+/* import { LandingButton } from "../../components/Buttons/LadingButton"; */
 import Logo from "/assets/logo.svg";
 import { Link } from "react-router-dom";
 
 import * as S from "./style";
-import { useState } from "react";
-import { LoginType } from "../../types/LoginType";
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
 
-
 export default function LoginPage() {
-  const userContext = useContext(UserContext);
-
-  const [formData, setFormData] = useState<LoginType>({ username: "",password: ""})
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    if (!userContext) {
-      return <div>Carregando...</div>; 
-    }
-    e.preventDefault()
-    try {
-      await userContext.loginUser(formData);
-    } catch (error) {
-      console.error("Erro no login: ", error);
-    }
-  };
+  const { setAuth } = useContext(UserContext);
 
   return (
     <S.Container>
@@ -50,15 +26,17 @@ export default function LoginPage() {
 
         <S.Form>
           <S.InputWrapper>
-            <S.Input placeholder=" " type="text" value={formData.username || ''} name="username" onChange={(e) => handleInputChange(e)}/>
+            <S.Input placeholder=" " type="text" />
             <S.InputLabel>Username</S.InputLabel>
           </S.InputWrapper>
 
           <S.InputWrapper>
-            <S.Input placeholder=" " type="text" value={formData.password || ''} name="password"  onChange={(e) => handleInputChange(e)}/>
+            <S.Input placeholder=" " />
             <S.InputLabel>Senha</S.InputLabel>
           </S.InputWrapper>
-          <S.but onClick={(e) => handleSubmit(e)}>entrar</S.but>
+
+          {/*                     <LandingButton route="/" text="Entrar" /> */}
+          <S.but onClick={() => setAuth(true)}>entrar</S.but>
         </S.Form>
       </S.Content>
     </S.Container>
