@@ -1,4 +1,4 @@
-import backgroundImg from "../../../public/assets/background-w-texture.svg";
+import backgroundImg from "../../assets/shapes_and_images/background-w-texture.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`

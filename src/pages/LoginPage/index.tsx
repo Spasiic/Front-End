@@ -1,5 +1,5 @@
 /* import { LandingButton } from "../../components/Buttons/LadingButton"; */
-import Logo from "/assets/logo.svg";
+import Logo from "/logo.svg";
 import { Link } from "react-router-dom";
 
 import * as S from "./style";

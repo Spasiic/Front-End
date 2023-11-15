@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import * as S from "./style";
 
-import albumPhoto1 from "../../../public/assets/testalbum1.jpg";
+import albumPhoto1 from "../../assets/shapes_and_images/testalbum1.jpg";
 
 // interface close {
 //     onClick: () => void;

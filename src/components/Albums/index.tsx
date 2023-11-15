@@ -1,11 +1,11 @@
-import AddAlarm from "/assets/alarme(1).svg";
-import PlayIcon from "/assets/play.svg";
-import albumPhoto1 from "/assets/testalbum1.jpg";
-import albumPhoto2 from "/assets/testalbum2.jpg";
-import albumPhoto3 from "/assets/testalbum3.jpg";
-import albumPhoto4 from "/assets/testalbum4.jpg";
-import albumPhoto5 from "/assets/testalbum5.jpg";
-import albumPhoto6 from "/assets/testalbum6.jpg";
+import AddAlarm from "../../assets/icons/add-alarm.svg";
+import PlayIcon from "../../assets/icons/play.svg";
+import albumPhoto1 from "../../assets/shapes_and_images/testalbum1.jpg";
+import albumPhoto2 from "../../assets/shapes_and_images/testalbum2.jpg";
+import albumPhoto3 from "../../assets/shapes_and_images/testalbum3.jpg";
+import albumPhoto4 from "../../assets/shapes_and_images/testalbum4.jpg";
+import albumPhoto5 from "../../assets/shapes_and_images/testalbum5.jpg";
+import albumPhoto6 from "../../assets/shapes_and_images/testalbum6.jpg";
 import { useState } from "react";
 
 import * as S from "./style";

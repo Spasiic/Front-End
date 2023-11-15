@@ -1,8 +1,8 @@
-import albumPhoto from "/assets/testalbum4.jpg";
-import escutado from "/assets/check.svg";
-import spotify from "/assets/spotify.svg";
-import deezer from "/assets/deezer.svg";
-import soundCloud from "/assets/soundCloud.svg";
+import albumPhoto from "../../assets/shapes_and_images/testalbum4.jpg";
+import escutado from "../../assets/icons/check.svg";
+import spotify from "../../assets/social_icons/spotify.svg";
+import deezer from "../../assets/social_icons/deezer.svg";
+import soundCloud from "../../assets/social_icons/soundCloud.svg";
 import { useEffect, useState } from "react";
 
 import * as S from "./style";

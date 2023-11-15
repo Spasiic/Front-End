@@ -1,6 +1,5 @@
 import { LandingButton } from "../../components/Buttons/LadingButton";
-/* import background from "/assests/background-w-texture.svg";*/
-import Logo from "/assets/logo.svg";
+import Logo from "/logo.svg";
 
 import * as S from "./style";
 import { Text } from "../../components/Elements/text";

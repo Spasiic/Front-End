@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Clock from "../../assets/icons/clock.svg";
 import Seta from "../../assets/icons/arrow.svg";
 import Close from "../../assets/icons/close.svg";
-import Calendar from "../../assets/calendar.svg";
+import Calendar from "../../assets/icons/calendar.svg";
 
 export const Blur = styled.div`
   width: 100vw;

@@ -2,7 +2,7 @@ import { createContext, useState, ReactNode } from "react";
 import { UserContextType } from "../types/UserContextType";
 
 export const UserContext = createContext<UserContextType>({
-  setAuth: () => {},
+  setAuth: () => { },
   auth: false,
 });
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import background from "../../../public/assets/background-w-texture.svg";
+import background from "../../assets/shapes_and_images/background-w-texture.svg";
 
 export const Landin = styled.nav`
   box-sizing: border-box;
