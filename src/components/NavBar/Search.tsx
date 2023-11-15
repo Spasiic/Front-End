@@ -1,4 +1,4 @@
-import IconPesquisa from "/assets/pesquisa.svg";
+import IconPesquisa from "../../assets/icons/search.svg";
 import * as S from "./styled";
 import { useState } from "react";
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import AddAlarm from "../../../public/assets/alarme(1).svg";
-import AlarmAdded from "../../../public/assets/alarme.svg";
-import Add from "../../../public/assets/plus.svg";
+import AddAlarm from "../../assets/icons/add-alarm.svg";
+import AlarmSet from "../../assets/icons/alarm-set.svg";
+import Add from "../../assets/icons/plus.svg";
 
 export const AlbumCard = styled.div`
   width: 31.188rem;
@@ -77,6 +77,8 @@ export const SocialLink = styled.a`
 export const AddButton = styled.button`
   width: 28px;
   height: 28px;
+  outline: none;
+  border: none;
   cursor: pointer;
   background-color: transparent;
   background: url(${Add}) no-repeat center center;
@@ -95,5 +97,5 @@ export const AlarmSetButton = styled.button`
   height: 28px;
   cursor: pointer;
   background-color: transparent;
-  background: url(${AlarmAdded}) no-repeat center center;
+  background: url(${AlarmSet}) no-repeat center center;
 `;

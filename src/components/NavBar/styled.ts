@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import close from "../../../public/assets/close.svg";
+import close from "../../assets/icons/close.svg";
 
 // Search
 
@@ -95,7 +95,9 @@ export const Navigation = styled.nav`
 
 export const ButtonsContainer = styled.div`
   display: flex;
+  width: 100%;
   gap: 0.5rem;
+  justify-content: center;
   @media (min-width: 1165px) {
   }
 `;

@@ -1,6 +1,6 @@
-import Logo from "/assets/logo.svg";
-import IconList from "/assets/lista.svg";
-import IconSearchMusic from "/assets/pesquisamusica.svg";
+import Logo from "/logo.svg";
+import IconList from "../../assets/icons/list.svg";
+import IconSearchMusic from "../../assets/icons/search.svg";
 import { useState } from "react";
 import { FocusButton } from "../Buttons/FocusButton";
 import { SelectedFocusButton } from "../Buttons/SelectedFocusButton";
@@ -22,18 +22,17 @@ export function Header() {
   };
 
   return (
-    <S.HeaderContainer className="m-4 flex flex-col md:flex-row justify-between items-center overflow-y-hidden">
+    <S.HeaderContainer>
       <S.LogoImage
         draggable="false"
         src={Logo}
         height={89}
         width={127}
         alt="Logo MyMusicList"
-        className="mb-2 hidden lg:block"
       />
 
-      <S.Navigation className="flex flex-col-reverse md:flex-row gap-4">
-        <S.ButtonsContainer className="flex gap-2">
+      <S.Navigation>
+        <S.ButtonsContainer>
           {listSelected ? (
             <SelectedFocusButton text="minha lista" img={IconList} />
           ) : (
@@ -60,7 +59,7 @@ export function Header() {
           )}
         </S.ButtonsContainer>
 
-        <S.SearchSection className="flex flex-row gap-2">
+        <S.SearchSection>
           <Search />
         </S.SearchSection>
       </S.Navigation>

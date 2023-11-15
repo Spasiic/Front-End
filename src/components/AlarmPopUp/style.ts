@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Clock from "../../../public/assets/clock.svg";
-import Seta from "../../../public/assets/seta.svg";
-import Close from "../../../public/assets/close.svg";
-import Calendar from "../../../public/assets/calendar.svg";
+import Clock from "../../assets/icons/clock.svg";
+import Seta from "../../assets/icons/arrow.svg";
+import Close from "../../assets/icons/close.svg";
+import Calendar from "../../assets/calendar.svg";
 
 export const Blur = styled.div`
   width: 100vw;
