@@ -1,7 +1,9 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import AddAlarm from "../../../public/assets/alarme(1).svg";
 import AlarmAdded from "../../../public/assets/alarme.svg";
 import Add from "../../../public/assets/plus.svg";
+import Check from "../../../public/assets/check.svg";
+import ClockIcon from "../../../public/assets/clock.svg";
 
 export const AlbumCard = styled.div`
   width: 31.188rem;
@@ -54,6 +56,7 @@ export const Controls = styled.div`
   justify-items: center;
   height: max-content;
   margin-right: 1rem;
+  gap: 6px;
 
   h3 {
     font-weight: 300;
@@ -74,12 +77,33 @@ export const SocialLink = styled.a`
   }
 `;
 
+const rotateAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+`;
+
 export const AddButton = styled.button`
   width: 28px;
   height: 28px;
   cursor: pointer;
   background-color: transparent;
   background: url(${Add}) no-repeat center center;
+
+  &.rotate {
+    animation: ${rotateAnimation} 1s linear forwards;
+  }
+`;
+
+export const CheckButton = styled.button`
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${Check}) no-repeat center center;
 `;
 
 export const AlarmAddButton = styled.button`
@@ -96,4 +120,12 @@ export const AlarmSetButton = styled.button`
   cursor: pointer;
   background-color: transparent;
   background: url(${AlarmAdded}) no-repeat center center;
+`;
+
+export const Clock = styled.button`
+ width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(${ClockIcon}) no-repeat center center;
 `;

@@ -36,6 +36,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h1`
   font-weight: 200;
   font-size: 1rem;
+  display: flex;
 `;
 
 export const RegistrationLink = styled.p`
@@ -43,6 +44,11 @@ export const RegistrationLink = styled.p`
   text-transform: uppercase;
   text-decoration: underline;
   padding: 0.2rem;
+  transition: .5s;
+
+  &:hover{
+    color: #515151;
+  }
 `;
 
 export const Form = styled.form`
@@ -58,34 +64,90 @@ export const Form = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1.8rem;
+    margin: 2rem 0;
   }
 `;
 
 export const InputWrapper = styled.div`
-  width: 100%;
-  margin-top: 1.2rem;
+  width: 24vw; 
   position: relative;
+  padding: 15px 0 0;
 `;
 
 export const Input = styled.input`
-  width: 24vw;
-  background-color: transparent;
-  outline: none;
-  border: none;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #9b9b9b; 
+  outline: 0;
+  font-size: 1rem;
+  color: #fff; 
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  padding:.2rem;
 
-  border-bottom: 1px solid white;
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ label {
+    font-size: 1rem;
+    cursor: text;
+    top: 10px;
+  }
+
+  &:focus {
+    ~ label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: .8rem;
+      color: #515151;
+      font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 100;
+    border-width: 2px;
+    border-image: linear-gradient(to right, #515151, #9b9b9b); 
+    border-image-slice: 1;
+  }
 `;
 
 export const InputLabel = styled.label`
-  font-size: 0.8rem;
   position: absolute;
-  left: 0;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: .8rem;
+  color: #9b9b9b; 
 `;
 
 export const Description = styled.span`
-  font-size: 0.6rem;
-  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  padding: .2rem 0;
+  font-size: 0.75rem;
   color: red;
+  cursor: default;
+  user-select: none;
 `;
+
+export const buttonAuth = styled.button`
+ background-color: #515151;
+ padding: .8rem;
+ border-radius: 99999px;
+ width: 15vw;
+
+ font-size: 1rem;
+ text-transform: uppercase;
+ font-weight: 600;
+
+ cursor: pointer;
+ transition: .5s;
+
+ &:hover{
+  transform: scale(1.1);
+ }
+`

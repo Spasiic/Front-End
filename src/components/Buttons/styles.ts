@@ -72,22 +72,32 @@ export const TextFC = styled.p`
 
 export const CustomButtonLanding = styled.button`
   background-color: #515151;
-  width: max-content;
-  height: auto;
-  padding: 1rem 2rem;
-  border-radius: 9999px;
-  text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
+  border: 2px solid ${(props) => props.theme.colors.gray};
+  border-radius: 30px;
+  box-shadow: ${(props) => props.theme.colors.gray} 4px 4px 0 0;
+  color: ${(props) => props.theme.colors.gray};
   cursor: pointer;
-
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  transition: .4s;
+  
   &:hover {
-    background-color: ${(props) => props.theme.colors.gray};
+    box-shadow: none;
   }
 
-  a {
+  &:active {
+    box-shadow: none;
+  }
+
+  a{
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
   }
 `;
 

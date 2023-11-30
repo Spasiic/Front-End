@@ -1,5 +1,8 @@
+import { background } from '/assests/background-w-texture.svg';
+import { background } from '/assests/background-w-texture.svg';
 import styled from "styled-components";
 import close from "../../../public/assets/close.svg";
+import logout from "../../../public/assets/logout.svg";
 
 // Search
 
@@ -64,8 +67,6 @@ export const HeaderContainer = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  overflow-y: hidden;
-
   @media (min-width: 1165px) {
     flex-direction: row;
   }
@@ -75,9 +76,6 @@ export const LogoImage = styled.img`
   height: 89px;
   width: 127px;
   margin-bottom: 2px;
-  @media (max-width: 1165px) {
-    display: none;
-  }
 `;
 
 export const Navigation = styled.nav`
@@ -97,6 +95,10 @@ export const ButtonsContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   @media (min-width: 1165px) {
+  }
+
+  button{
+    cursor: pointer;
   }
 `;
 

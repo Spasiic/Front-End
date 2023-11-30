@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 
 // Style
 
 import * as S from "./style";
-
-import albumPhoto1 from "../../../public/assets/testalbum1.jpg";
+import clock from "/assets/clock.svg";
+import { UserContext } from "../../contexts/UserContext";
 
 // interface close {
 //     onClick: () => void;
 // }
 
-export default function Alarm() {
+export default function Alarm({ onClose,name,author,image,musicID }) {
+  const { setAlarmes,alarmes } = useContext(UserContext);
+
   const [countHour, setCountHour] = useState("00");
   const [countMin, setCountMin] = useState("02");
   const [selectedDate, setSelectedDate] = useState("");
@@ -64,8 +66,12 @@ export default function Alarm() {
       setDateError(true);
     } else {
       setDateError(false);
-      const DateAlarm = `${selectedDate}T${countHour}:${countMin}:00Z`;
-      console.log(DateAlarm);
+      const DateAlarm = `${selectedDate} ${countHour}:${countMin}:00`;
+      const AlarmMusic = {music_id: musicID, data: DateAlarm}
+      const novosAlarmes = [...alarmes, AlarmMusic];
+
+      setAlarmes(novosAlarmes);
+      onClose()
     }
   }
 
@@ -74,25 +80,25 @@ export default function Alarm() {
       <S.AlarmContainer>
         {/* top div */}
         <S.TopDiv>
-          <S.ClockIcon />
+          <S.ClockIcon src={clock}/>
           <S.Title className="text-[20px] font-semibold uppercase">
             Programar Alarme
           </S.Title>
-          <S.CloseButton />
+          <S.CloseButton onClick={onClose}/>
         </S.TopDiv>
 
         {/* music, album or artist photo + title */}
         <S.MusicInfo>
           <S.AlbumPhoto
-            src={albumPhoto1}
+            src={image}
             alt="cover"
             draggable="false"
           ></S.AlbumPhoto>
           <S.InfoGrid>
             <S.MusicTitle className="text-[14px] font-normal ">
-              Take Me Out
+              {name}
             </S.MusicTitle>
-            <S.ArtistName>Franz Ferdinand</S.ArtistName>
+            <S.ArtistName>{author}</S.ArtistName>
           </S.InfoGrid>
         </S.MusicInfo>
 

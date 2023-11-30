@@ -7,11 +7,11 @@ import { LoginType } from "../../types/LoginType";
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
 
-
 export default function LoginPage() {
   const userContext = useContext(UserContext);
 
   const [formData, setFormData] = useState<LoginType>({ username: "",password: ""})
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -22,14 +22,29 @@ export default function LoginPage() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    if (!userContext) {
-      return <div>Carregando...</div>; 
+    e.preventDefault();
+
+    const errors: { [key: string]: string } = {};
+
+    if (!formData.username.trim()) {
+      errors.username = "Por favor, preencha o campo de usuário";
     }
-    e.preventDefault()
-    try {
-      await userContext.loginUser(formData);
-    } catch (error) {
-      console.error("Erro no login: ", error);
+    if (!formData.password.trim()) {
+      errors.password = "Por favor, preencha o campo de senha";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+    } else {
+      setFormErrors({});
+      try {
+        if (!userContext) {
+          return <div>Carregando...</div>;
+        }
+        await userContext.loginUser(formData);
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
@@ -52,13 +67,15 @@ export default function LoginPage() {
           <S.InputWrapper>
             <S.Input placeholder=" " type="text" value={formData.username || ''} name="username" onChange={(e) => handleInputChange(e)}/>
             <S.InputLabel>Username</S.InputLabel>
+            {formErrors.username && <S.Description>{formErrors.username}</S.Description>}
           </S.InputWrapper>
 
           <S.InputWrapper>
-            <S.Input placeholder=" " type="text" value={formData.password || ''} name="password"  onChange={(e) => handleInputChange(e)}/>
+            <S.Input placeholder=" " type="password" value={formData.password || ''} name="password"  onChange={(e) => handleInputChange(e)}/>
             <S.InputLabel>Senha</S.InputLabel>
+            {formErrors.password && <S.Description>{formErrors.password}</S.Description>}
           </S.InputWrapper>
-          <S.but onClick={(e) => handleSubmit(e)}>entrar</S.but>
+          <S.buttonAuth onClick={(e) => handleSubmit(e)}>entrar</S.buttonAuth>
         </S.Form>
       </S.Content>
     </S.Container>

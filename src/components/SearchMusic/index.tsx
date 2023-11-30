@@ -1,42 +1,25 @@
-import { useEffect, useState } from "react";
-import { Text } from "../Elements/text";
-/* import Albums from "../Albums";
-import { CardArtist } from "../Card-Artist/CardArtist"; */
+import { useContext, useEffect } from "react";
+import { UserContext } from "../../contexts/UserContext";
+import CardMusic from "../CardMusic";
+import { MusicsContainer } from "./style";
 
 export default function SearchMusic() {
-  const [searchWord, setSearchWord] = useState();
+  const { listMusics } = useContext(UserContext);
 
-  useEffect(() => {
-    console.log(setSearchWord);
-  }, []);
 
   return (
-    <>
-      <Text $size="medium" $weight="semibold" $case="upper">
-        {} testando.
-      </Text>
-      <Text $size="small" $weight="regular">
-        Resultados para {searchWord} na biblioteca musical.
-      </Text>
-      {/* 
-            <div>
-                <h1 className="font-semibold text-subtitle">Artistas</h1>
-                <div>
-                    <CardArtist name="teste" artist="teste" />
-                </div>
-            </div>
-
-            <div>
-                <h1 className="font-semibold text-subtitle">Músicas</h1>
-                <div>
-                    a
-                </div>
-            </div>
-
-            <div>
-                <h1 className="font-semibold text-subtitle">Álbuns</h1>
-                <Albums />
-            </div> */}
-    </>
+    <MusicsContainer>
+      {listMusics && listMusics.map((music, index) => (
+        <div key={index}>
+          <CardMusic name={music.name} 
+          author={music.album_info.author_info.name}
+          time={music.duration}
+          image={music.album_info.image}
+          musicID={music.id}
+          added={false}
+          />
+        </div>
+      ))}
+    </MusicsContainer>
   );
 }

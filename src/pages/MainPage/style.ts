@@ -5,5 +5,12 @@ export const MainContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
+  overflow-x: hidden;
+
+  .content{
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;

@@ -24,5 +24,21 @@ export const api = {
     logoutUser: async () =>{
         const response = await API_PATH.delete('/logout/')
         return response
-    }
+    }, 
+    allMusics: async () => {
+        const response = await API_PATH.get('/musics/')
+        return response
+    },
+    addMusic: async (user,music) => {
+        const response = await API_PATH.post('/wishlistentries/',{user,music})
+        return response
+    },
+    getWishlist: async(userID) =>{
+        const response = await API_PATH.get(`/wishlistentries/?filter="user":${userID}`)
+        return response
+    },
+    getMusicID: async (musicID) => {
+        const response = await API_PATH.get(`/musics/${musicID}/`)
+        return response
+    },
 }

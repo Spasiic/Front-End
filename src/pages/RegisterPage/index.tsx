@@ -129,6 +129,7 @@ export default function RegisterPage() {
             <S.InputWrapper>
               <S.Input
                 placeholder=" "
+                type="password"
                 name="password"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -144,7 +145,7 @@ export default function RegisterPage() {
             </S.InputWrapper>
 
             <S.InputWrapper>
-              <S.Input placeholder=" " onChange={handleConfirmSenha} />
+              <S.Input placeholder=" " onChange={handleConfirmSenha} type="password"/>
               <S.InputLabel>Confirme sua Senha</S.InputLabel>
 
               {formik.touched.password &&
@@ -156,7 +157,7 @@ export default function RegisterPage() {
             </S.InputWrapper>
           </section>
 
-          <button type="submit">Cadastrar</button>
+          <S.buttonAuth type="submit">Cadastrar</S.buttonAuth>
         </S.Form>
       </S.Content>
     </S.Container>

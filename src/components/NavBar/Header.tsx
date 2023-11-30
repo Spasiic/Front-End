@@ -1,51 +1,56 @@
 import Logo from "/assets/logo.svg";
 import IconList from "/assets/lista.svg";
 import IconSearchMusic from "/assets/pesquisamusica.svg";
-import { useState } from "react";
+import IconLogout from "/assets/logout.svg";
+import { useContext } from "react";
 import { FocusButton } from "../Buttons/FocusButton";
 import { SelectedFocusButton } from "../Buttons/SelectedFocusButton";
-import { Search } from "./Search";
 import * as S from "./styled";
+import { UserContext } from "../../contexts/UserContext";
+import { api } from "../../services/authAPI";
 
 export function Header() {
-  const [listSelected, setListSelected] = useState(false);
-  const [searchMSelected, setSearchMSelected] = useState(false);
+  const { wishlist, setWishlist,setAuth } = useContext(UserContext);
 
-  const handleListSelect = () => {
-    setListSelected(!listSelected);
-    setSearchMSelected(false);
+  const handleSetWishlist = (value) => {
+    if (wishlist !== value) {
+      setWishlist(value);
+    }
   };
 
-  const handleSearchMSelect = () => {
-    setSearchMSelected(!searchMSelected);
-    setListSelected(false);
-  };
+  async function logoutUser(){
+    const response = api.logoutUser()
+    if((await response).status == 200){
+      localStorage.clear();
+      setAuth(false)
+    }
+  }
+
 
   return (
-    <S.HeaderContainer className="m-4 flex flex-col md:flex-row justify-between items-center overflow-y-hidden">
+    <S.HeaderContainer>
       <S.LogoImage
         draggable="false"
         src={Logo}
         height={89}
         width={127}
         alt="Logo MyMusicList"
-        className="mb-2 hidden lg:block"
       />
 
-      <S.Navigation className="flex flex-col-reverse md:flex-row gap-4">
-        <S.ButtonsContainer className="flex gap-2">
-          {listSelected ? (
+      <S.Navigation>
+        <S.ButtonsContainer>
+          {wishlist ? (
             <SelectedFocusButton text="minha lista" img={IconList} />
           ) : (
             <FocusButton
               text="minha lista"
               img={IconList}
-              onClick={handleListSelect}
-              selected={listSelected}
+              onClick={() => handleSetWishlist(true)}
+              selected={wishlist}
             />
           )}
 
-          {searchMSelected ? (
+          {!wishlist ? (
             <SelectedFocusButton
               text="pesquisar músicas"
               img={IconSearchMusic}
@@ -54,15 +59,14 @@ export function Header() {
             <FocusButton
               text="pesquisar músicas"
               img={IconSearchMusic}
-              onClick={handleSearchMSelect}
-              selected={searchMSelected}
+              onClick={() => handleSetWishlist(false)}
+              selected={!wishlist}
             />
           )}
+           <button onClick={logoutUser} className="icon"><img src={IconLogout} alt="" /></button>
         </S.ButtonsContainer>
 
-        <S.SearchSection className="flex flex-row gap-2">
-          <Search />
-        </S.SearchSection>
+        <S.SearchSection>{/* Seu componente de Search aqui */}</S.SearchSection>
       </S.Navigation>
     </S.HeaderContainer>
   );
