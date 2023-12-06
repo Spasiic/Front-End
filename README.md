@@ -35,7 +35,7 @@ Abaixo estão instruções de como rodar o projeto localmente.
 2. Entre na pasta do projeto
 
 ```bash
-  cd ensinio-front
+  cd Front-End
 ```
 
 3. Instale os packages necessários
